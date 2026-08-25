@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ImageLightbox from "@/components/ImageLightbox";
 
 const skills = [
   "SQL", "T-SQL", "PostgreSQL", "Snowflake", "Python", "Pandas",
@@ -164,7 +163,7 @@ export default function Home() {
                 GitHub ↗
               </a>
               <a
-                href="mailto:hello@rayresurreccion.com"
+                href="mailto:dynamind795@gmail.com"
                 className="text-slate-400 transition hover:text-cyan-200"
               >
                 Email ↗
@@ -347,9 +346,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <ImageLightbox
-                src="/images/dragon/Explore_the_Dragon.jpg"
-                alt="Read the 1997 Talon Marks newspaper article about The Dragon"
+              <a
+                href="/images/dragon/Explore_the_Dragon.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Read the original 1997 Talon Marks article"
                 className="absolute -bottom-7 -left-5 hidden w-44 rotate-[-4deg] overflow-hidden rounded-xl border border-white/10 bg-[#101923] p-2 shadow-xl transition duration-300 hover:rotate-0 hover:scale-110 hover:border-cyan-300/40 lg:block"
               >
                 <div className="relative aspect-[3/4]">
@@ -367,7 +368,7 @@ export default function Home() {
                   </p>
                   <span className="font-mono text-[9px] text-cyan-300">READ ↗</span>
                 </div>
-              </ImageLightbox>
+              </a>
             </div>
           </div>
         </div>
@@ -458,7 +459,7 @@ export default function Home() {
               </h2>
             </div>
             <a
-              href="mailto:hello@rayresurreccion.com"
+              href="mailto:dynamind795@gmail.com"
               className="w-fit rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-200"
             >
               Email Ray <Arrow />
