@@ -424,12 +424,11 @@ export default function Home() {
         <div className="grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] lg:grid-cols-[.8fr_1.2fr]">
           <div className="relative min-h-[420px] border-b border-white/10 lg:min-h-0 lg:border-b-0 lg:border-r">
             <Image
-              src="/images/about/raymond-professional-portrait-alt.jpg"
-              alt="Ray Resurreccion in a professional office setting"
-              fill
-              className="object-cover object-center"
-              sizes="(min-width: 1024px) 40vw, 100vw"
-            />
+  src="/images/raymond-professional-portrait-alt.jpg"
+  alt="Ray Resurreccion"
+  fill
+  className="object-cover object-[center_20%]"
+/>
             <div className="absolute inset-0 bg-gradient-to-t from-[#07111f]/60 via-transparent to-transparent" />
           </div>
           <div className="p-8 sm:p-12">
