@@ -45,6 +45,15 @@ const projects = [
     href: "#",
   },
   {
+    eyebrow: "SENIOR PROJECT • REAL CLIENT",
+    title: "FARR Shipping & Receiving System",
+    description:
+      "A 2002 DeVry senior project built for Anaheim Marriott to replace a manual package-tracking process with a Microsoft Access/VBA database, barcode-supported workflows, operational reporting, and delivery tracking.",
+    stack: ["Microsoft Access", "VBA", "Database Design", "Requirements Analysis"],
+    status: "Anaheim Marriott • 2002",
+    href: "/projects/farr",
+  },
+  {
     eyebrow: "EARLY SOFTWARE PROJECT",
     title: "Super Lotto Machine",
     description:
