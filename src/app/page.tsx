@@ -2,8 +2,18 @@ import Image from "next/image";
 import ImageLightbox from "@/components/ImageLightbox";
 
 const skills = [
-  "SQL", "T-SQL", "PostgreSQL", "Snowflake", "Python", "Pandas",
-  "Power BI", "Tableau", "dbt", "AWS", "Data Modeling", "ETL / ELT"
+  { name:"SQL", what:"The core language I use to retrieve, join, validate, aggregate, and transform business data.", benefit:"Helps companies turn raw operational data into reliable answers, reporting, and decision support." },
+  { name:"T-SQL", what:"Microsoft SQL Server's SQL implementation, including stored procedures, CTEs, window functions, and database-side processing.", benefit:"Moves complex processing closer to the data, improving repeatability, automation, and performance." },
+  { name:"PostgreSQL", what:"A powerful open-source relational database I use in modern application and data-platform projects.", benefit:"Provides a dependable, flexible foundation for applications, analytics, integrations, and structured business data." },
+  { name:"Snowflake", what:"A cloud data platform for storing, transforming, and analyzing data from multiple business systems.", benefit:"Helps organizations reduce data silos and scale analytics around a consistent source of trusted information." },
+  { name:"Python", what:"A general-purpose language I am expanding for data engineering, automation, APIs, and analytical workflows.", benefit:"Automates repetitive work and connects databases, files, APIs, cloud services, and analytical processes." },
+  { name:"Pandas", what:"Python's data-analysis toolkit for cleaning, reshaping, validating, and exploring structured datasets.", benefit:"Makes repeatable data preparation and exploratory analysis faster than manual spreadsheet-heavy workflows." },
+  { name:"Power BI", what:"A business-intelligence platform for data modeling, KPI reporting, dashboards, and interactive analysis.", benefit:"Gives leaders and operational teams accessible, consistent views of performance and business trends." },
+  { name:"Tableau", what:"A visual analytics platform for exploring data and communicating patterns through interactive dashboards.", benefit:"Makes complex information easier for business users to understand, explore, and act on." },
+  { name:"dbt", what:"A modern analytics-engineering framework for building documented, testable SQL transformations.", benefit:"Brings software-engineering practices to analytics so business logic is easier to maintain, test, and trust." },
+  { name:"AWS", what:"Cloud services I am expanding for data storage, processing, integration, and modern data-engineering workflows.", benefit:"Allows organizations to build scalable data solutions without depending entirely on traditional on-premises infrastructure." },
+  { name:"Data Modeling", what:"Structuring entities, relationships, facts, dimensions, and business rules so data represents the organization clearly.", benefit:"Creates a dependable foundation for reporting, analytics, integration, and consistent KPI definitions." },
+  { name:"ETL / ELT", what:"Processes for extracting data from source systems, transforming it, and loading it into analytical platforms.", benefit:"Combines information from disconnected systems into dependable, repeatable datasets ready for analysis." },
 ];
 
 const projects = [
@@ -398,14 +408,23 @@ export default function Home() {
       <section className="border-y border-white/10 bg-[#0a1626]">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <p className="font-mono text-sm tracking-[0.2em] text-cyan-300">TECHNICAL TOOLKIT</p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-500">
+            Select a technology to see what it does and how it can create business value.
+          </p>
+          <div className="mt-8 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-slate-200"
-              >
-                {skill}
-              </span>
+              <details key={skill.name} className="group rounded-2xl border border-white/10 bg-white/[0.04] transition open:border-cyan-300/30 open:bg-white/[0.06]">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-sm font-semibold text-slate-200 [&::-webkit-details-marker]:hidden">
+                  <span>{skill.name}</span>
+                  <span className="font-mono text-lg font-normal text-cyan-300 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <div className="border-t border-white/10 px-5 pb-5 pt-4">
+                  <p className="font-mono text-[10px] tracking-[0.16em] text-cyan-300">WHAT IT IS</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">{skill.what}</p>
+                  <p className="mt-5 font-mono text-[10px] tracking-[0.16em] text-cyan-300">BUSINESS VALUE</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-400">{skill.benefit}</p>
+                </div>
+              </details>
             ))}
           </div>
           <p className="mt-6 max-w-3xl text-sm leading-6 text-slate-500">
