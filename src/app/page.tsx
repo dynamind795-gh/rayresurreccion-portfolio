@@ -163,7 +163,7 @@ export default function Home() {
                 GitHub ↗
               </a>
               <a
-                href="mailto:dynamind795@gmail.com"
+                href="mailto:hello@rayresurreccion.com"
                 className="text-slate-400 transition hover:text-cyan-200"
               >
                 Email ↗
@@ -459,7 +459,7 @@ export default function Home() {
               </h2>
             </div>
             <a
-              href="mailto:dynamind795@gmail.com"
+              href="mailto:hello@rayresurreccion.com"
               className="w-fit rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-200"
             >
               Email Ray <Arrow />
