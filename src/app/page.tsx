@@ -12,7 +12,7 @@ const projects = [
     description:
       "An evolving data platform for ingesting, organizing, and analyzing personal operational data using modern data-engineering patterns.",
     stack: ["Python", "FastAPI", "PostgreSQL", "Docker"],
-    status: "In development",
+    status: "Coming soon",
     href: "#",
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     description:
       "A structured analytics system for application activity, recruiter communication, follow-ups, outcomes, and job-search performance.",
     stack: ["SQL", "Python", "Analytics", "Automation"],
-    status: "In development",
+    status: "Coming soon",
     href: "#",
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     description:
       "A portfolio of KPI design, dimensional modeling, reporting, and data storytelling patterns built around business decision-making.",
     stack: ["Power BI", "Tableau", "SQL", "KPI Design"],
-    status: "Case studies",
+    status: "Coming soon",
     href: "#",
   },
   {
@@ -260,8 +260,8 @@ export default function Home() {
                     Case study <Arrow />
                   </a>
                 ) : (
-                  <span className="font-semibold text-slate-600">
-                    Case study
+                  <span className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-xs tracking-wide text-slate-500">
+                    COMING SOON
                   </span>
                 )}
               </div>
