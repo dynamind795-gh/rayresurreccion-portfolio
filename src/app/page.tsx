@@ -424,7 +424,7 @@ export default function Home() {
         <div className="grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] lg:grid-cols-[.8fr_1.2fr]">
           <div className="relative min-h-[420px] border-b border-white/10 lg:min-h-0 lg:border-b-0 lg:border-r">
             <Image
-  src="/images/raymond-professional-portrait-alt.jpg"
+  src="/images/about/raymond-professional-portrait-alt.jpg"
   alt="Ray Resurreccion"
   fill
   className="object-cover object-[center_20%]"
