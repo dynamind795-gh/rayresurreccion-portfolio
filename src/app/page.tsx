@@ -137,7 +137,7 @@ export default function Home() {
                 Explore my work
               </a>
               <a
-                href="/Raymond_Resurreccion_Data_Analyst_Resume.pdf"
+                href="/Raymond_Resurreccion_Resume.pdf"
                 className="rounded-full border border-white/15 px-6 py-3 text-sm font-bold text-white transition hover:border-white/30 hover:bg-white/5"
                 download
               >
