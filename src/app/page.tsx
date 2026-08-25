@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ImageLightbox from "@/components/ImageLightbox";
 
 const skills = [
   "SQL", "T-SQL", "PostgreSQL", "Snowflake", "Python", "Pandas",
@@ -14,6 +15,16 @@ const projects = [
     stack: ["Python", "FastAPI", "PostgreSQL", "Docker"],
     status: "Coming soon",
     href: "#",
+  },
+  {
+    eyebrow: "LIVE CONSULTING PROJECT",
+    title: "Connect2U Data Solutions",
+    description:
+      "A live data consulting business focused on helping organizations solve SQL, reporting, data cleanup, automation, and analytics problems.",
+    stack: ["SQL", "Data Analysis", "Reporting", "Automation"],
+    status: "Live",
+    href: "https://connect2u.xyz",
+    external: true,
   },
   {
     eyebrow: "ANALYTICS PROJECT",
@@ -163,7 +174,7 @@ export default function Home() {
                 GitHub ↗
               </a>
               <a
-                href="mailto:dynamind795@gmail.com"
+                href="mailto:hello@rayresurreccion.com"
                 className="text-slate-400 transition hover:text-cyan-200"
               >
                 Email ↗
@@ -255,9 +266,12 @@ export default function Home() {
                 {project.href !== "#" ? (
                   <a
                     href={project.href}
+                    {...("external" in project && project.external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
                     className="font-semibold text-cyan-200 transition group-hover:translate-x-1"
                   >
-                    Case study <Arrow />
+                    {"external" in project && project.external ? "Visit site" : "Case study"} <Arrow />
                   </a>
                 ) : (
                   <span className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 font-mono text-xs tracking-wide text-slate-500">
@@ -346,11 +360,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <a
-                href="/images/dragon/Explore_the_Dragon.jpg"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Read the original 1997 Talon Marks article"
+              <ImageLightbox
+                src="/images/dragon/Explore_the_Dragon.jpg"
+                alt="Read the 1997 Talon Marks newspaper article about The Dragon"
                 className="absolute -bottom-7 -left-5 hidden w-44 rotate-[-4deg] overflow-hidden rounded-xl border border-white/10 bg-[#101923] p-2 shadow-xl transition duration-300 hover:rotate-0 hover:scale-110 hover:border-cyan-300/40 lg:block"
               >
                 <div className="relative aspect-[3/4]">
@@ -368,7 +380,7 @@ export default function Home() {
                   </p>
                   <span className="font-mono text-[9px] text-cyan-300">READ ↗</span>
                 </div>
-              </a>
+              </ImageLightbox>
             </div>
           </div>
         </div>
@@ -376,7 +388,7 @@ export default function Home() {
 
       <section className="border-y border-white/10 bg-[#0a1626]">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <p className="font-mono text-sm tracking-[0.2em] text-cyan-300">WORKING TOOLKIT</p>
+          <p className="font-mono text-sm tracking-[0.2em] text-cyan-300">TECHNICAL TOOLKIT</p>
           <div className="mt-8 flex flex-wrap gap-3">
             {skills.map((skill) => (
               <span
@@ -388,8 +400,8 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-6 max-w-3xl text-sm leading-6 text-slate-500">
-            The portfolio will distinguish long-term professional strengths from tools
-            being expanded through current projects and training.
+            A practical toolkit built through years of SQL, analytics, and business intelligence
+            work—and continually expanded through modern data engineering technologies.
           </p>
         </div>
       </section>
@@ -459,7 +471,7 @@ export default function Home() {
               </h2>
             </div>
             <a
-              href="mailto:dynamind795@gmail.com"
+              href="mailto:hello@rayresurreccion.com"
               className="w-fit rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-200"
             >
               Email Ray <Arrow />
