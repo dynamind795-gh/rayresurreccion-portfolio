@@ -92,7 +92,14 @@ export default function FarrPage() {
                 database. My original portfolio also records that I helped program the Visual Basic
                 for Applications behind the database.
               </p>
-              <div className="mt-8 rounded-2xl border border-cyan-300/20 bg-cyan-300/[0.04] p-6">
+              <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                <p className="font-mono text-xs tracking-widest text-cyan-300">WHY “FARR”?</p>
+                <p className="mt-3 leading-7 text-slate-300">
+                  The project name came from our four-person team: Fatima, Alex, Ray, and Raymond.
+                </p>
+              </div>
+
+              <div className="mt-4 rounded-2xl border border-cyan-300/20 bg-cyan-300/[0.04] p-6">
                 <p className="font-mono text-xs tracking-widest text-cyan-300">PROJECT CONTEXT</p>
                 <p className="mt-3 leading-7 text-slate-300">
                   Four team members brought different specialties to the project. The surviving
