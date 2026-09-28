@@ -13,6 +13,10 @@ export const contact = {
 // For Zelle, use a verified enrollment link or an owned page with exact instructions.
 export const payments: { name: string; href: string | null }[] = [
   { name: "Cash App", href: "https://cash.app/$RaymondResurreccion5" },
-  { name: "Zelle", href: null },
+  {
+    name: "Zelle",
+    // Exact destination decoded from the owner's Zelle QR code.
+    href: "https://enroll.zellepay.com/qr-codes/?data=eyJuYW1lIjoiUkFZIFJFU1VSUkVDQ0lPTiIsInRva2VuIjoiNTYyLTIzMy05MTUxIiwiYWN0aW9uIjoicGF5bWVudCJ9",
+  },
   { name: "PayPal", href: "https://paypal.me/Raymond958" },
 ];
