@@ -14,5 +14,5 @@ export const contact = {
 export const payments: { name: string; href: string | null }[] = [
   { name: "Cash App", href: null },
   { name: "Zelle", href: null },
-  { name: "PayPal", href: null },
+  { name: "PayPal", href: "https://paypal.me/Raymond958" },
 ];
