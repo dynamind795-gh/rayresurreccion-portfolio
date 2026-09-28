@@ -31,6 +31,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
+### QR contact page
+
+`/contact` is the mobile contact card; `/contact/vcard` downloads a vCard with
+the public resume phone number and the site's professional email/profile links.
+Edit `src/lib/contact.ts` to update details. Cash App, Zelle, and PayPal remain
+disabled while their `href` is `null`. Set only owner-confirmed destinations;
+do not infer a Zelle recipient from the contact email or phone. A Zelle destination
+may be a verified enrollment link or an owned page with confirmed instructions.
+
+The watch QR points to `https://rayresurreccion.com/contact`, so contact changes
+do not require a new QR. Keep the QR square, black on white, with its white margin
+intact when displaying it on the watch.
+
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
