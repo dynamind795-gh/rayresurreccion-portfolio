@@ -9,6 +9,12 @@ export const contact = {
   resume: "/Raymond_Resurreccion_Resume.pdf",
 };
 
+export const familyContacts = [
+  { name: "Diana", phone: "+15623350086", displayPhone: "562-335-0086" },
+  { name: "Ryan", phone: "+15626039173", displayPhone: "562-603-9173" },
+  { name: "Raiden", phone: "+15624050848", displayPhone: "562-405-0848" },
+];
+
 // Add only owner-confirmed destinations. Never infer payment IDs from email/phone.
 // For Zelle, use a verified enrollment link or an owned page with exact instructions.
 export const payments: { name: string; href: string | null }[] = [

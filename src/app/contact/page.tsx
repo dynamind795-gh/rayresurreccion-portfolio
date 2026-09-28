@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { contact, payments } from "@/lib/contact";
+import { contact, familyContacts, payments } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Connect with Ray | Raymond Resurreccion",
@@ -21,6 +21,7 @@ export default function ContactPage() {
           <h1 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">Ray Resurreccion</h1>
           <p className="mt-3 text-sm leading-6 text-slate-400">Data Analytics · Business Intelligence<br />SQL · Data Engineering</p>
           <p className="mt-4 text-sm text-slate-300">Good to meet you. Let&apos;s stay in touch.</p>
+          <a href="#call-if-found" className="mt-3 inline-flex min-h-11 items-center rounded-full border border-cyan-300/30 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-300/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300">Call if found / Family contacts ↓</a>
         </header>
 
         <nav aria-label="Contact and profile links" className="mt-8 grid gap-3">
@@ -50,6 +51,18 @@ export default function ContactPage() {
               <button key={name} type="button" disabled className="flex min-h-14 w-full items-center justify-between gap-3 rounded-2xl border border-white/10 px-5 py-4 text-left text-sm text-slate-400 disabled:cursor-not-allowed">
                 <span>{name}</span><span className="text-xs">Not available yet</span>
               </button>
+            ))}
+          </div>
+        </section>
+        <section id="call-if-found" aria-labelledby="family-heading" className="mt-8 scroll-mt-6 rounded-3xl border border-cyan-300/30 bg-cyan-300/5 p-5">
+          <h2 id="family-heading" className="text-xl font-bold text-white">Family emergency contacts</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-300">Need to reach my family, or found my phone or watch? Please call one of these contacts. Thank you!</p>
+          <div className="mt-4 grid gap-3">
+            {familyContacts.map(({ name, phone, displayPhone }) => (
+              <a key={name} href={`tel:${phone}`} className={actionClass}>
+                <span>Call {name}<span className="mt-1 block text-sm font-normal text-slate-400">{displayPhone}</span></span>
+                <span aria-hidden="true">↗</span>
+              </a>
             ))}
           </div>
         </section>
