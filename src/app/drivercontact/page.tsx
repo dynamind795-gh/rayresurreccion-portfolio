@@ -6,7 +6,7 @@ import { contact, payments } from "@/lib/contact";
 export const metadata: Metadata = {
   title: "Your Driver Ray | Contact & Tips",
   description: "Thanks for riding with Ray. Save his number, get in touch, or leave a tip.",
-  alternates: { canonical: `${contact.website}/contact2` },
+  alternates: { canonical: `${contact.website}/drivercontact` },
 };
 
 const actionClass = "flex min-h-16 items-center justify-between gap-3 rounded-2xl border border-white/15 bg-white/[0.035] px-5 py-4 text-sm font-semibold text-slate-100 transition hover:border-cyan-300/50 hover:bg-cyan-300/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300";
