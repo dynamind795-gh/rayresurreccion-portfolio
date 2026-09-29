@@ -8,12 +8,9 @@ export function GET() {
     "VERSION:3.0",
     "N:Resurreccion;Raymond;;;",
     `FN:${contact.name}`,
-    "NICKNAME:Ray",
     `TEL;TYPE=VOICE:${contact.phone}`,
     `EMAIL;TYPE=INTERNET,WORK:${contact.email}`,
     `URL:${contact.website}`,
-    `URL:${contact.linkedin}`,
-    `URL:${contact.github}`,
     "END:VCARD",
     "",
   ].join("\r\n");
