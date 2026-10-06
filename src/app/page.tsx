@@ -261,6 +261,58 @@ export default function Home() {
           </p>
         </div>
 
+        <div className="mt-12 grid gap-5 lg:grid-cols-2">
+          <article className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035]">
+            <div className="relative aspect-[16/9] overflow-hidden bg-[#0b1726]">
+              <video
+                className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
+                aria-label="10-second data analytics word cloud video preview"
+                controls
+                muted
+                playsInline
+                preload="none"
+                poster="/media/analytics/data-analytics-word-cloud-poster.webp"
+              >
+                <source src="/media/analytics/data-analytics-word-cloud.mp4" type="video/mp4" />
+              </video>
+              <Image
+                src="/media/analytics/data-analytics-word-cloud-poster.webp"
+                alt="A word cloud of data analytics terms on a dark background"
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="hidden object-cover motion-reduce:block"
+              />
+            </div>
+            <div className="p-6 sm:p-7">
+              <p className="font-mono text-xs tracking-[0.18em] text-cyan-300">FOLLOW THE SIGNAL · MUTED PREVIEW</p>
+              <h3 className="mt-3 text-xl font-bold tracking-tight text-white">Find the pattern behind the numbers.</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-400">
+                A visual pause that reflects the questions, measures, and connections at the heart of analytics.
+              </p>
+            </div>
+          </article>
+
+          <article className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035]">
+            <div className="relative aspect-[16/9] overflow-hidden bg-[#0b1726]">
+              <Image
+                src="/media/analytics/stock-charts-office.webp"
+                alt="An analyst reviewing financial charts on a computer in a modern office"
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover transition duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07111f]/40 via-transparent to-transparent" />
+            </div>
+            <div className="p-6 sm:p-7">
+              <p className="font-mono text-xs tracking-[0.18em] text-cyan-300">ANALYTICS IN CONTEXT</p>
+              <h3 className="mt-3 text-xl font-bold tracking-tight text-white">Turn analysis into shared understanding.</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-400">
+                Clear reporting gives teams a practical way to see what is changing and decide what to do next.
+              </p>
+            </div>
+          </article>
+        </div>
+
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {projects.map((project, index) => (
             <article
