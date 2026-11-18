@@ -25,4 +25,5 @@ export const payments: { name: string; href: string | null }[] = [
     href: "https://enroll.zellepay.com/qr-codes/?data=eyJuYW1lIjoiUkFZIFJFU1VSUkVDQ0lPTiIsInRva2VuIjoiNTYyLTIzMy05MTUxIiwiYWN0aW9uIjoicGF5bWVudCJ9",
   },
   { name: "PayPal", href: "https://paypal.me/Raymond958" },
+  { name: "Venmo", href: "https://www.venmo.com/u/Raymond-Resurreccion" },
 ];
